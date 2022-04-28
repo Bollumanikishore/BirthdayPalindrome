@@ -61,7 +61,7 @@ function EventListener(){
     if(palindrome(final)==1)
     {
         console.log("Hurrey! your birthday is a palindrome...");
-
+        
     }
     else
     {
