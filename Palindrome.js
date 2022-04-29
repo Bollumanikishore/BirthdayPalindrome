@@ -65,6 +65,32 @@ function EventListener(){
     }
     else
     {
+        var date = {day :"", month:"",year:""};
+        date.day = Number(day);
+        date.month = Number(month);
+        date.year = Number(year);
+        console.log(date);
+        var noOfDays =[31,28,31,30,31,30,31,31,30,31,30,31];
+        for(var i=date.day; i< noOfDays.length;i++)
+        {
+            date.day = date.day+1;
+            if(palindrome(date))
+            {
+                console.log("Palindrome");
+                break;
+            }
+            if(date.day > noOfDays[date.month-1])
+            {
+                date.day= 1;
+                date.month = date.month+1; 
+            }
+        }
+        console.log(date);
+        
+
+        
+        
+        
         var finans1=nextpalindrome(final);
         // console.log(finans1);
         var finans2=prevpalinrome(final);
